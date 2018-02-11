@@ -1,18 +1,14 @@
-host = "10.211.55.2"
-port = 8000
-mount = "frisky_mp3_high"
+%include "config.liq"
 emptyMount = "empty"
-password = "hackme"
-
 
 
 dyn_sources = ref []
 
 set("server.telnet",true)
 
-out = output.icecast(%mp3,
+out = output.icecast(%aac(channels=2, samplerate=44100, bitrate=64, adts=true),
                      host=host,
-                     mount=mount,
+                     mount=frisky_mp3_high_mount,
                      port=port,
                      password=password,
                      fallible=true)
