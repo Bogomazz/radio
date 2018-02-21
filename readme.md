@@ -3,7 +3,7 @@
 3. configure icecast (http://icecast.org/docs/icecast-2.4.1/config-file.html)
   change sources limitation: 
   &lt;limits>
-        &lt;sources>22&lt;/sources>'
+        &lt;sources>22&lt;/sources>
   
 4. run icecast
 5. change config.liq
